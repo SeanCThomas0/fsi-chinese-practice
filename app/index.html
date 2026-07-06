@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FSI Standard Chinese — Speaking Practice</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🀄</text></svg>" />
+</head>
+<body>
+  <div id="layout">
+    <aside id="sidebar">
+      <header id="sidebar-header">
+        <h1>FSI 中文</h1>
+        <p class="subtitle">Standard Chinese: A Modular Approach</p>
+      </header>
+      <nav id="nav"><!-- populated by app.js --></nav>
+      <footer id="sidebar-footer">
+        <p>Audio &amp; texts: public-domain FSI course, streamed from
+          <a href="https://fsi-languages.yojik.eu/" target="_blank" rel="noopener">yojik.eu</a></p>
+      </footer>
+    </aside>
+
+    <main id="main">
+      <div id="content"><!-- populated by app.js --></div>
+    </main>
+  </div>
+
+  <div id="player" class="hidden">
+    <div id="player-info">
+      <span id="player-title">—</span>
+      <span id="player-sub"></span>
+    </div>
+
+    <div id="player-controls">
+      <div id="transport">
+        <button id="btn-back" title="Back 5s (←)">⟲ 5</button>
+        <button id="btn-play" title="Play/Pause (Space)">▶</button>
+        <button id="btn-fwd" title="Forward 5s (→)">5 ⟳</button>
+      </div>
+
+      <div id="seek-row">
+        <span id="time-cur">0:00</span>
+        <div id="seek-wrap">
+          <input type="range" id="seek" min="0" max="1000" value="0" />
+          <div id="loop-marker-a" class="loop-marker hidden"></div>
+          <div id="loop-marker-b" class="loop-marker hidden"></div>
+        </div>
+        <span id="time-dur">0:00</span>
+      </div>
+
+      <div id="tools">
+        <div class="tool-group" title="Loop a section: set A at the start, B at the end (L)">
+          <button id="btn-loop-a">A</button>
+          <button id="btn-loop-b" disabled>B</button>
+          <button id="btn-loop-clear" disabled>✕</button>
+        </div>
+        <div class="tool-group">
+          <label for="speed">Speed</label>
+          <select id="speed">
+            <option value="0.5">0.5×</option>
+            <option value="0.65">0.65×</option>
+            <option value="0.8">0.8×</option>
+            <option value="1" selected>1×</option>
+            <option value="1.25">1.25×</option>
+          </select>
+        </div>
+        <div class="tool-group" id="recorder">
+          <button id="btn-rec" title="Record yourself (R)">● Rec</button>
+          <button id="btn-rec-play" disabled title="Play your last recording (E)">▶ Me</button>
+          <button id="btn-compare" disabled title="Play loop section, then your recording">A/B vs Me</button>
+        </div>
+      </div>
+    </div>
+    <audio id="audio" preload="metadata"></audio>
+    <audio id="rec-audio"></audio>
+  </div>
+
+  <div id="shortcuts-hint">
+    <kbd>Space</kbd> play/pause · <kbd>←</kbd>/<kbd>→</kbd> ±5s · <kbd>L</kbd> loop A/B · <kbd>K</kbd> clear loop · <kbd>R</kbd> record · <kbd>E</kbd> play recording
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
