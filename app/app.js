@@ -152,8 +152,10 @@ function renderHome() {
       Work through the Resource Module first (pronunciation, romanization, numbers), then the core
       modules in order. Each unit has <em>Comprehension</em> (C), <em>Production</em> (P), and
       <em>Drill</em> (D) tapes — the P and D tapes are where you speak out loud.</p>
-      <p>Use the <strong>A-B loop</strong> to repeat a sentence until you can shadow it, slow the
-      speed if needed, and hit <strong>Rec</strong> to record yourself and compare against the tape.</p>
+      <p>The practice loop: set an <strong>A-B loop</strong> on a sentence, hit <strong>🎙 Record</strong>
+      and repeat it — your take plays back automatically the moment you stop. Then hit
+      <strong>🔁 Tape↔Me</strong> to alternate the native speaker with your own voice on repeat,
+      re-recording until they match. Slow the speed if you need to.</p>
     </div>
     <div class="home-grid" id="home-grid"></div>`;
 
@@ -361,6 +363,7 @@ function loadTape(url, title, sub, rowEl) {
   rowEl?.classList.add("playing");
 
   clearLoop();
+  recAudio.pause();
   state.currentTape = { url, title, sub };
   audio.src = url;
   audio.playbackRate = parseFloat($("#speed").value);
@@ -386,8 +389,9 @@ audio.addEventListener("timeupdate", () => {
     audio.currentTime = state.loopA ?? 0;
   }
   if (state.comparing && state.loopB != null && audio.currentTime >= state.loopB) {
+    // hand off to your take; the cycle stays armed and recAudio's "ended"
+    // handler brings the tape back
     audio.pause();
-    state.comparing = false;
     recAudio.currentTime = 0;
     recAudio.play().catch(() => {});
   }
@@ -411,6 +415,8 @@ function updatePlayButton() {
 $("#btn-play").addEventListener("click", togglePlay);
 function togglePlay() {
   if (!audio.src) return;
+  stopCompareCycle();
+  recAudio.pause();
   if (audio.paused) audio.play().catch(() => {});
   else audio.pause();
 }
@@ -453,6 +459,7 @@ function setLoopB() {
 }
 
 function clearLoop() {
+  stopCompareCycle();
   state.loopA = null;
   state.loopB = null;
   $("#btn-loop-a").classList.remove("set");
@@ -484,11 +491,28 @@ function loopKey() {
 
 /* -------- recording -------- */
 
+let recTimerInterval = null;
+
+function showRecTimer(startedAt) {
+  const el = $("#rec-timer");
+  el.classList.remove("hidden");
+  recTimerInterval = setInterval(() => {
+    el.textContent = fmtTime((Date.now() - startedAt) / 1000);
+  }, 200);
+}
+
+function hideRecTimer() {
+  clearInterval(recTimerInterval);
+  $("#rec-timer").classList.add("hidden");
+  $("#rec-timer").textContent = "0:00";
+}
+
 async function toggleRecord() {
   if (state.recorder && state.recorder.state === "recording") {
     state.recorder.stop();
     return;
   }
+  stopCompareCycle();
   try {
     const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
     state.recChunks = [];
@@ -497,17 +521,22 @@ async function toggleRecord() {
     rec.ondataavailable = (e) => state.recChunks.push(e.data);
     rec.onstop = () => {
       stream.getTracks().forEach((t) => t.stop());
+      hideRecTimer();
       if (state.recUrl) URL.revokeObjectURL(state.recUrl);
       const blob = new Blob(state.recChunks, { type: rec.mimeType || "audio/webm" });
       state.recUrl = URL.createObjectURL(blob);
       recAudio.src = state.recUrl;
       $("#btn-rec").classList.remove("recording");
-      $("#btn-rec").textContent = "● Rec";
+      $("#btn-rec").textContent = "🎙 Record";
       $("#btn-rec-play").disabled = false;
       updateCompareEnabled();
+      // Immediate feedback: hear your take right after you stop.
+      playRecording();
     };
     rec.start();
     audio.pause();
+    recAudio.pause();
+    showRecTimer(Date.now());
     $("#btn-rec").classList.add("recording");
     $("#btn-rec").textContent = "■ Stop";
   } catch (err) {
@@ -534,18 +563,48 @@ function updateCompareEnabled() {
   $("#btn-compare").disabled = !(state.recUrl && state.loopA != null && state.loopB != null);
 }
 
-// Play the looped tape section once, then your recording right after.
-function compare() {
+/* Tape↔Me cycle: plays the A-B section, then your take, then the section
+ * again, ... until you toggle it off. This is the core "keep working on it"
+ * loop — listen, hear yourself, listen again. */
+
+function startCompareCycle() {
   if (state.loopA == null || state.loopB == null || !state.recUrl) return;
   state.comparing = true;
+  $("#btn-compare").classList.add("cycling");
   recAudio.pause();
   audio.currentTime = state.loopA;
   audio.play().catch(() => {});
 }
 
+function stopCompareCycle() {
+  state.comparing = false;
+  $("#btn-compare").classList.remove("cycling");
+}
+
+function toggleCompareCycle() {
+  if (state.comparing) {
+    stopCompareCycle();
+    audio.pause();
+    recAudio.pause();
+  } else {
+    startCompareCycle();
+  }
+}
+
+// When your take finishes during a cycle, go back to the tape section.
+recAudio.addEventListener("ended", () => {
+  if (state.comparing) {
+    audio.currentTime = state.loopA ?? 0;
+    audio.play().catch(() => {});
+  }
+});
+
 $("#btn-rec").addEventListener("click", toggleRecord);
-$("#btn-rec-play").addEventListener("click", playRecording);
-$("#btn-compare").addEventListener("click", compare);
+$("#btn-rec-play").addEventListener("click", () => {
+  stopCompareCycle();
+  playRecording();
+});
+$("#btn-compare").addEventListener("click", toggleCompareCycle);
 
 /* -------- keyboard shortcuts -------- */
 
@@ -578,7 +637,12 @@ document.addEventListener("keydown", (e) => {
       break;
     case "e":
     case "E":
+      stopCompareCycle();
       playRecording();
+      break;
+    case "c":
+    case "C":
+      toggleCompareCycle();
       break;
   }
 });

@@ -13,8 +13,9 @@ student texts/workbooks stream directly from
   optional modules, review tapes, and criterion tests.
 - **Drill-focused player** — A-B section looping (repeat one exchange until you can
   shadow it), playback speed 0.5×–1.25×, ±5s skip, keyboard-first controls.
-- **Record & compare** — record yourself with the mic, then play the looped tape
-  section followed immediately by your own recording to compare pronunciation.
+- **Record & compare** — hit 🎙 Record, speak, and your take plays back the moment
+  you stop; 🔁 Tape↔Me then alternates the looped tape section with your own voice
+  on repeat until you match the native speaker.
 - **Tone-pair drills** — all 20 two-syllable tone combinations with HSK-1/2
   vocabulary, spoken by your browser's Mandarin TTS voice: a listen-and-identify
   quiz (weighted toward your weak combos), a browse/shadow mode, and a per-combo
@@ -60,8 +61,9 @@ python3 -m http.server 8000 -d app
 | `←` / `→` | Skip back / forward 5s |
 | `L` | Set loop point A, then B, then clear |
 | `K` | Clear loop |
-| `R` | Start / stop recording |
-| `E` | Play your last recording |
+| `R` | Start / stop recording (your take auto-plays on stop) |
+| `E` | Replay your last take |
+| `C` | Toggle the Tape↔Me comparison cycle |
 
 ## Deploying
 

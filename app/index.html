@@ -69,9 +69,10 @@
           </select>
         </div>
         <div class="tool-group" id="recorder">
-          <button id="btn-rec" title="Record yourself (R)">● Rec</button>
-          <button id="btn-rec-play" disabled title="Play your last recording (E)">▶ Me</button>
-          <button id="btn-compare" disabled title="Play loop section, then your recording">A/B vs Me</button>
+          <button id="btn-rec" title="Record yourself, then it plays back automatically (R)">🎙 Record</button>
+          <span id="rec-timer" class="hidden">0:00</span>
+          <button id="btn-rec-play" disabled title="Replay your last take (E)">▶ My take</button>
+          <button id="btn-compare" disabled title="Alternate the A-B tape section with your take, on repeat (C)">🔁 Tape↔Me</button>
         </div>
       </div>
     </div>
@@ -80,7 +81,7 @@
   </div>
 
   <div id="shortcuts-hint">
-    <kbd>Space</kbd> play/pause · <kbd>←</kbd>/<kbd>→</kbd> ±5s · <kbd>L</kbd> loop A/B · <kbd>K</kbd> clear loop · <kbd>R</kbd> record · <kbd>E</kbd> play recording
+    <kbd>Space</kbd> play/pause · <kbd>←</kbd>/<kbd>→</kbd> ±5s · <kbd>L</kbd> loop A/B · <kbd>K</kbd> clear loop · <kbd>R</kbd> record · <kbd>E</kbd> my take · <kbd>C</kbd> tape↔me
   </div>
 
   <script src="vendor/hanzi-writer.min.js"></script>

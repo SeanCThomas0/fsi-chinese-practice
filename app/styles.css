@@ -304,7 +304,18 @@ body {
 }
 
 #btn-loop-a.set, #btn-loop-b.set { background: var(--gold); color: #1a1d26; border-color: var(--gold); }
-#btn-rec.recording { background: var(--accent); border-color: var(--accent); color: #fff; animation: pulse 1.2s infinite; }
+
+#recorder { border: 1px solid var(--border); border-radius: 10px; padding: 4px 6px; }
+#recorder button { border: none; background: none; }
+#btn-rec { color: var(--accent); font-weight: 600; }
+#btn-rec.recording { background: var(--accent); color: #fff; border-radius: 8px; animation: pulse 1.2s infinite; }
+#btn-compare.cycling { background: var(--gold); color: #1a1d26; border-radius: 8px; }
+#rec-timer {
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+  font-size: 0.8rem;
+}
+#rec-timer.hidden { display: none; }
 
 @keyframes pulse { 50% { opacity: 0.6; } }
 
@@ -541,4 +552,7 @@ kbd {
   .quiz-card { padding: 16px 10px; }
   .tone-pick-label { width: 100%; text-align: center; }
   .tone-btn { min-width: 46px; padding: 10px 8px; }
+  #tools { width: 100%; justify-content: space-between; }
+  #recorder { flex: 1; justify-content: center; }
+  #recorder button, #transport button { padding: 10px 12px; font-size: 0.9rem; }
 }
