@@ -85,6 +85,19 @@ function renderNav() {
     nav.appendChild(el);
   };
 
+  label("Practice Tools");
+  const tools = [
+    ["tones", "声调", "Tone-Pair Drills"],
+    ["writing", "写字", "Writing Practice"],
+  ];
+  for (const [id, code, name] of tools) {
+    const btn = document.createElement("button");
+    btn.className = "nav-item" + (state.view === id ? " active" : "");
+    btn.innerHTML = `<span class="nav-code">${code}</span><span class="nav-name">${name}</span>`;
+    btn.addEventListener("click", () => show(id));
+    nav.appendChild(btn);
+  }
+
   label("Foundation");
   nav.appendChild(mkItem("resource", "RES", "Resource Module", resourceTapeUrls(state.catalog.resource)));
 
@@ -100,12 +113,16 @@ function renderNav() {
 }
 
 function show(viewId) {
-  state.view = viewId;
+  state.view = viewId.startsWith("writing/") ? "writing" : viewId;
   if (location.hash.slice(1) !== viewId) {
     history.replaceState(null, "", viewId === "home" ? "#" : "#" + viewId);
   }
   renderNav();
   if (viewId === "home") renderHome();
+  else if (viewId === "tones") renderTones();
+  else if (viewId.startsWith("writing/")) {
+    openCharacterByChar(decodeURIComponent(viewId.slice("writing/".length)));
+  } else if (viewId === "writing") renderWriting();
   else if (viewId === "resource") renderResource();
   else {
     const mod =
@@ -198,6 +215,10 @@ function tapeRow(url, title, sub, badge) {
     b.textContent = badge.text;
     row.appendChild(b);
   }
+  if (typeof offlineButton === "function") {
+    const dl = offlineButton(url);
+    if (dl) row.appendChild(dl);
+  }
   if (state.currentTape?.url === url) row.classList.add("playing");
   return row;
 }
@@ -217,7 +238,14 @@ function unitCard(titleText, rows) {
   countEl.addEventListener("refresh", refresh);
 
   title.innerHTML = `<span>${titleText}</span>`;
-  title.appendChild(countEl);
+  const right = document.createElement("span");
+  right.className = "unit-title-right";
+  if (typeof offlineAllButton === "function") {
+    const all = offlineAllButton(rows.map((r) => r.dataset.url));
+    if (all) right.appendChild(all);
+  }
+  right.appendChild(countEl);
+  title.appendChild(right);
   card.appendChild(title);
   rows.forEach((r) => card.appendChild(r));
   refresh();

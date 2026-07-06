@@ -1,0 +1,125 @@
+{
+  "note": "Tones: 1-4 plus 0 = neutral tone. Words chosen from HSK1-2 / FSI early-module vocabulary.",
+  "pairs": [
+    { "tones": [1, 1], "words": [
+      { "hanzi": "今天", "pinyin": "jīntiān", "gloss": "today" },
+      { "hanzi": "咖啡", "pinyin": "kāfēi", "gloss": "coffee" },
+      { "hanzi": "飞机", "pinyin": "fēijī", "gloss": "airplane" },
+      { "hanzi": "星期", "pinyin": "xīngqī", "gloss": "week" }
+    ]},
+    { "tones": [1, 2], "words": [
+      { "hanzi": "中国", "pinyin": "Zhōngguó", "gloss": "China" },
+      { "hanzi": "欢迎", "pinyin": "huānyíng", "gloss": "welcome" },
+      { "hanzi": "非常", "pinyin": "fēicháng", "gloss": "very, extremely" },
+      { "hanzi": "帮忙", "pinyin": "bāngmáng", "gloss": "to help" }
+    ]},
+    { "tones": [1, 3], "words": [
+      { "hanzi": "机场", "pinyin": "jīchǎng", "gloss": "airport" },
+      { "hanzi": "铅笔", "pinyin": "qiānbǐ", "gloss": "pencil" },
+      { "hanzi": "开始", "pinyin": "kāishǐ", "gloss": "to begin" },
+      { "hanzi": "身体", "pinyin": "shēntǐ", "gloss": "body, health" }
+    ]},
+    { "tones": [1, 4], "words": [
+      { "hanzi": "工作", "pinyin": "gōngzuò", "gloss": "work, job" },
+      { "hanzi": "高兴", "pinyin": "gāoxìng", "gloss": "happy" },
+      { "hanzi": "商店", "pinyin": "shāngdiàn", "gloss": "shop" },
+      { "hanzi": "希望", "pinyin": "xīwàng", "gloss": "to hope" }
+    ]},
+    { "tones": [1, 0], "words": [
+      { "hanzi": "妈妈", "pinyin": "māma", "gloss": "mom" },
+      { "hanzi": "先生", "pinyin": "xiānsheng", "gloss": "Mr., sir" },
+      { "hanzi": "东西", "pinyin": "dōngxi", "gloss": "thing" },
+      { "hanzi": "休息", "pinyin": "xiūxi", "gloss": "to rest" }
+    ]},
+    { "tones": [2, 1], "words": [
+      { "hanzi": "昨天", "pinyin": "zuótiān", "gloss": "yesterday" },
+      { "hanzi": "房间", "pinyin": "fángjiān", "gloss": "room" },
+      { "hanzi": "时间", "pinyin": "shíjiān", "gloss": "time" },
+      { "hanzi": "明天", "pinyin": "míngtiān", "gloss": "tomorrow" }
+    ]},
+    { "tones": [2, 2], "words": [
+      { "hanzi": "学习", "pinyin": "xuéxí", "gloss": "to study" },
+      { "hanzi": "银行", "pinyin": "yínháng", "gloss": "bank" },
+      { "hanzi": "长城", "pinyin": "Chángchéng", "gloss": "Great Wall" },
+      { "hanzi": "食堂", "pinyin": "shítáng", "gloss": "cafeteria" }
+    ]},
+    { "tones": [2, 3], "words": [
+      { "hanzi": "啤酒", "pinyin": "píjiǔ", "gloss": "beer" },
+      { "hanzi": "苹果", "pinyin": "píngguǒ", "gloss": "apple" },
+      { "hanzi": "牛奶", "pinyin": "niúnǎi", "gloss": "milk" },
+      { "hanzi": "词典", "pinyin": "cídiǎn", "gloss": "dictionary" }
+    ]},
+    { "tones": [2, 4], "words": [
+      { "hanzi": "学校", "pinyin": "xuéxiào", "gloss": "school" },
+      { "hanzi": "白菜", "pinyin": "báicài", "gloss": "cabbage" },
+      { "hanzi": "同事", "pinyin": "tóngshì", "gloss": "colleague" },
+      { "hanzi": "迟到", "pinyin": "chídào", "gloss": "to be late" }
+    ]},
+    { "tones": [2, 0], "words": [
+      { "hanzi": "朋友", "pinyin": "péngyou", "gloss": "friend" },
+      { "hanzi": "便宜", "pinyin": "piányi", "gloss": "cheap" },
+      { "hanzi": "名字", "pinyin": "míngzi", "gloss": "name" },
+      { "hanzi": "儿子", "pinyin": "érzi", "gloss": "son" }
+    ]},
+    { "tones": [3, 1], "words": [
+      { "hanzi": "老师", "pinyin": "lǎoshī", "gloss": "teacher" },
+      { "hanzi": "北京", "pinyin": "Běijīng", "gloss": "Beijing" },
+      { "hanzi": "火车", "pinyin": "huǒchē", "gloss": "train" },
+      { "hanzi": "好吃", "pinyin": "hǎochī", "gloss": "tasty" }
+    ]},
+    { "tones": [3, 2], "words": [
+      { "hanzi": "美国", "pinyin": "Měiguó", "gloss": "USA" },
+      { "hanzi": "旅游", "pinyin": "lǚyóu", "gloss": "to travel" },
+      { "hanzi": "起床", "pinyin": "qǐchuáng", "gloss": "to get up" },
+      { "hanzi": "语言", "pinyin": "yǔyán", "gloss": "language" }
+    ]},
+    { "tones": [3, 3], "words": [
+      { "hanzi": "你好", "pinyin": "nǐhǎo", "gloss": "hello" },
+      { "hanzi": "手表", "pinyin": "shǒubiǎo", "gloss": "wristwatch" },
+      { "hanzi": "洗澡", "pinyin": "xǐzǎo", "gloss": "to shower" },
+      { "hanzi": "老虎", "pinyin": "lǎohǔ", "gloss": "tiger" }
+    ]},
+    { "tones": [3, 4], "words": [
+      { "hanzi": "考试", "pinyin": "kǎoshì", "gloss": "exam" },
+      { "hanzi": "感谢", "pinyin": "gǎnxiè", "gloss": "to thank" },
+      { "hanzi": "请问", "pinyin": "qǐngwèn", "gloss": "may I ask" },
+      { "hanzi": "比赛", "pinyin": "bǐsài", "gloss": "match, competition" }
+    ]},
+    { "tones": [3, 0], "words": [
+      { "hanzi": "我们", "pinyin": "wǒmen", "gloss": "we, us" },
+      { "hanzi": "姐姐", "pinyin": "jiějie", "gloss": "older sister" },
+      { "hanzi": "椅子", "pinyin": "yǐzi", "gloss": "chair" },
+      { "hanzi": "饺子", "pinyin": "jiǎozi", "gloss": "dumpling" }
+    ]},
+    { "tones": [4, 1], "words": [
+      { "hanzi": "汽车", "pinyin": "qìchē", "gloss": "car" },
+      { "hanzi": "面包", "pinyin": "miànbāo", "gloss": "bread" },
+      { "hanzi": "唱歌", "pinyin": "chànggē", "gloss": "to sing" },
+      { "hanzi": "蛋糕", "pinyin": "dàngāo", "gloss": "cake" }
+    ]},
+    { "tones": [4, 2], "words": [
+      { "hanzi": "问题", "pinyin": "wèntí", "gloss": "question, problem" },
+      { "hanzi": "练习", "pinyin": "liànxí", "gloss": "to practice" },
+      { "hanzi": "地图", "pinyin": "dìtú", "gloss": "map" },
+      { "hanzi": "课文", "pinyin": "kèwén", "gloss": "lesson text" }
+    ]},
+    { "tones": [4, 3], "words": [
+      { "hanzi": "电影", "pinyin": "diànyǐng", "gloss": "movie" },
+      { "hanzi": "汉语", "pinyin": "Hànyǔ", "gloss": "Chinese language" },
+      { "hanzi": "跳舞", "pinyin": "tiàowǔ", "gloss": "to dance" },
+      { "hanzi": "上海", "pinyin": "Shànghǎi", "gloss": "Shanghai" }
+    ]},
+    { "tones": [4, 4], "words": [
+      { "hanzi": "再见", "pinyin": "zàijiàn", "gloss": "goodbye" },
+      { "hanzi": "电话", "pinyin": "diànhuà", "gloss": "telephone" },
+      { "hanzi": "现在", "pinyin": "xiànzài", "gloss": "now" },
+      { "hanzi": "睡觉", "pinyin": "shuìjiào", "gloss": "to sleep" }
+    ]},
+    { "tones": [4, 0], "words": [
+      { "hanzi": "谢谢", "pinyin": "xièxie", "gloss": "thanks" },
+      { "hanzi": "爸爸", "pinyin": "bàba", "gloss": "dad" },
+      { "hanzi": "妹妹", "pinyin": "mèimei", "gloss": "younger sister" },
+      { "hanzi": "漂亮", "pinyin": "piàoliang", "gloss": "pretty" }
+    ]}
+  ]
+}

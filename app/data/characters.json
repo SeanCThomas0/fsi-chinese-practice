@@ -1,0 +1,175 @@
+[
+  {
+    "group": "Numbers",
+    "chars": [
+      { "char": "一", "pinyin": "yī", "gloss": "one" },
+      { "char": "二", "pinyin": "èr", "gloss": "two" },
+      { "char": "三", "pinyin": "sān", "gloss": "three" },
+      { "char": "四", "pinyin": "sì", "gloss": "four" },
+      { "char": "五", "pinyin": "wǔ", "gloss": "five" },
+      { "char": "六", "pinyin": "liù", "gloss": "six" },
+      { "char": "七", "pinyin": "qī", "gloss": "seven" },
+      { "char": "八", "pinyin": "bā", "gloss": "eight" },
+      { "char": "九", "pinyin": "jiǔ", "gloss": "nine" },
+      { "char": "十", "pinyin": "shí", "gloss": "ten" },
+      { "char": "百", "pinyin": "bǎi", "gloss": "hundred" },
+      { "char": "千", "pinyin": "qiān", "gloss": "thousand" },
+      { "char": "万", "pinyin": "wàn", "gloss": "ten thousand" },
+      { "char": "零", "pinyin": "líng", "gloss": "zero" },
+      { "char": "两", "pinyin": "liǎng", "gloss": "two (of something)" },
+      { "char": "块", "pinyin": "kuài", "gloss": "yuan (money)" },
+      { "char": "毛", "pinyin": "máo", "gloss": "10 cents" },
+      { "char": "钱", "pinyin": "qián", "gloss": "money" }
+    ]
+  },
+  {
+    "group": "Pronouns & People",
+    "chars": [
+      { "char": "我", "pinyin": "wǒ", "gloss": "I, me" },
+      { "char": "你", "pinyin": "nǐ", "gloss": "you" },
+      { "char": "您", "pinyin": "nín", "gloss": "you (polite)" },
+      { "char": "他", "pinyin": "tā", "gloss": "he, him" },
+      { "char": "她", "pinyin": "tā", "gloss": "she, her" },
+      { "char": "们", "pinyin": "men", "gloss": "plural suffix" },
+      { "char": "人", "pinyin": "rén", "gloss": "person" },
+      { "char": "男", "pinyin": "nán", "gloss": "male" },
+      { "char": "女", "pinyin": "nǚ", "gloss": "female" },
+      { "char": "孩", "pinyin": "hái", "gloss": "child" },
+      { "char": "子", "pinyin": "zi", "gloss": "child; suffix" },
+      { "char": "朋", "pinyin": "péng", "gloss": "friend (朋友)" },
+      { "char": "友", "pinyin": "yǒu", "gloss": "friend (朋友)" },
+      { "char": "家", "pinyin": "jiā", "gloss": "home, family" },
+      { "char": "先", "pinyin": "xiān", "gloss": "first (先生 Mr.)" },
+      { "char": "生", "pinyin": "shēng", "gloss": "be born (先生, 学生)" },
+      { "char": "太", "pinyin": "tài", "gloss": "too; Mrs. (太太)" },
+      { "char": "老", "pinyin": "lǎo", "gloss": "old (老师)" },
+      { "char": "师", "pinyin": "shī", "gloss": "teacher (老师)" }
+    ]
+  },
+  {
+    "group": "Core Verbs",
+    "chars": [
+      { "char": "是", "pinyin": "shì", "gloss": "to be" },
+      { "char": "有", "pinyin": "yǒu", "gloss": "to have" },
+      { "char": "在", "pinyin": "zài", "gloss": "at, in; to be at" },
+      { "char": "来", "pinyin": "lái", "gloss": "to come" },
+      { "char": "去", "pinyin": "qù", "gloss": "to go" },
+      { "char": "看", "pinyin": "kàn", "gloss": "to look, read" },
+      { "char": "说", "pinyin": "shuō", "gloss": "to speak" },
+      { "char": "话", "pinyin": "huà", "gloss": "speech (说话)" },
+      { "char": "吃", "pinyin": "chī", "gloss": "to eat" },
+      { "char": "喝", "pinyin": "hē", "gloss": "to drink" },
+      { "char": "买", "pinyin": "mǎi", "gloss": "to buy" },
+      { "char": "卖", "pinyin": "mài", "gloss": "to sell" },
+      { "char": "学", "pinyin": "xué", "gloss": "to study" },
+      { "char": "习", "pinyin": "xí", "gloss": "to practice (学习)" },
+      { "char": "写", "pinyin": "xiě", "gloss": "to write" },
+      { "char": "读", "pinyin": "dú", "gloss": "to read" },
+      { "char": "听", "pinyin": "tīng", "gloss": "to listen" },
+      { "char": "住", "pinyin": "zhù", "gloss": "to live (somewhere)" },
+      { "char": "想", "pinyin": "xiǎng", "gloss": "to want, think" },
+      { "char": "要", "pinyin": "yào", "gloss": "to want, will" },
+      { "char": "爱", "pinyin": "ài", "gloss": "to love" },
+      { "char": "会", "pinyin": "huì", "gloss": "can, know how" },
+      { "char": "能", "pinyin": "néng", "gloss": "can, be able" },
+      { "char": "做", "pinyin": "zuò", "gloss": "to do, make" },
+      { "char": "叫", "pinyin": "jiào", "gloss": "to be called" },
+      { "char": "姓", "pinyin": "xìng", "gloss": "surname; be surnamed" },
+      { "char": "知", "pinyin": "zhī", "gloss": "to know (知道)" },
+      { "char": "道", "pinyin": "dào", "gloss": "way (知道)" }
+    ]
+  },
+  {
+    "group": "Questions & Grammar",
+    "chars": [
+      { "char": "什", "pinyin": "shén", "gloss": "what (什么)" },
+      { "char": "么", "pinyin": "me", "gloss": "what (什么)" },
+      { "char": "谁", "pinyin": "shéi", "gloss": "who" },
+      { "char": "哪", "pinyin": "nǎ", "gloss": "which" },
+      { "char": "吗", "pinyin": "ma", "gloss": "question particle" },
+      { "char": "呢", "pinyin": "ne", "gloss": "and…? particle" },
+      { "char": "几", "pinyin": "jǐ", "gloss": "how many" },
+      { "char": "多", "pinyin": "duō", "gloss": "many; how" },
+      { "char": "少", "pinyin": "shǎo", "gloss": "few" },
+      { "char": "怎", "pinyin": "zěn", "gloss": "how (怎么)" },
+      { "char": "不", "pinyin": "bù", "gloss": "not" },
+      { "char": "没", "pinyin": "méi", "gloss": "not (have)" },
+      { "char": "很", "pinyin": "hěn", "gloss": "very" },
+      { "char": "也", "pinyin": "yě", "gloss": "also" },
+      { "char": "都", "pinyin": "dōu", "gloss": "all, both" },
+      { "char": "的", "pinyin": "de", "gloss": "possessive particle" },
+      { "char": "了", "pinyin": "le", "gloss": "completed-action particle" },
+      { "char": "对", "pinyin": "duì", "gloss": "correct; toward" },
+      { "char": "和", "pinyin": "hé", "gloss": "and" }
+    ]
+  },
+  {
+    "group": "Time",
+    "chars": [
+      { "char": "天", "pinyin": "tiān", "gloss": "day, sky" },
+      { "char": "年", "pinyin": "nián", "gloss": "year" },
+      { "char": "月", "pinyin": "yuè", "gloss": "month, moon" },
+      { "char": "日", "pinyin": "rì", "gloss": "day, sun" },
+      { "char": "时", "pinyin": "shí", "gloss": "time, hour" },
+      { "char": "分", "pinyin": "fēn", "gloss": "minute; cent" },
+      { "char": "点", "pinyin": "diǎn", "gloss": "o'clock; dot" },
+      { "char": "星", "pinyin": "xīng", "gloss": "star (星期 week)" },
+      { "char": "期", "pinyin": "qī", "gloss": "period (星期 week)" },
+      { "char": "今", "pinyin": "jīn", "gloss": "now (今天 today)" },
+      { "char": "明", "pinyin": "míng", "gloss": "bright (明天 tomorrow)" },
+      { "char": "昨", "pinyin": "zuó", "gloss": "yesterday (昨天)" },
+      { "char": "现", "pinyin": "xiàn", "gloss": "present (现在 now)" },
+      { "char": "候", "pinyin": "hòu", "gloss": "time (时候)" }
+    ]
+  },
+  {
+    "group": "Places & Position",
+    "chars": [
+      { "char": "国", "pinyin": "guó", "gloss": "country" },
+      { "char": "中", "pinyin": "zhōng", "gloss": "middle; China (中国)" },
+      { "char": "北", "pinyin": "běi", "gloss": "north (北京)" },
+      { "char": "京", "pinyin": "jīng", "gloss": "capital (北京)" },
+      { "char": "美", "pinyin": "měi", "gloss": "beautiful; USA (美国)" },
+      { "char": "英", "pinyin": "yīng", "gloss": "hero; UK (英国)" },
+      { "char": "上", "pinyin": "shàng", "gloss": "up, above" },
+      { "char": "下", "pinyin": "xià", "gloss": "down, below" },
+      { "char": "里", "pinyin": "lǐ", "gloss": "inside" },
+      { "char": "外", "pinyin": "wài", "gloss": "outside" },
+      { "char": "前", "pinyin": "qián", "gloss": "front, before" },
+      { "char": "后", "pinyin": "hòu", "gloss": "behind, after" },
+      { "char": "儿", "pinyin": "ér", "gloss": "child; -r suffix (哪儿)" },
+      { "char": "这", "pinyin": "zhè", "gloss": "this" },
+      { "char": "那", "pinyin": "nà", "gloss": "that" },
+      { "char": "到", "pinyin": "dào", "gloss": "to arrive, to" }
+    ]
+  },
+  {
+    "group": "Everyday Things",
+    "chars": [
+      { "char": "水", "pinyin": "shuǐ", "gloss": "water" },
+      { "char": "茶", "pinyin": "chá", "gloss": "tea" },
+      { "char": "饭", "pinyin": "fàn", "gloss": "meal, rice" },
+      { "char": "菜", "pinyin": "cài", "gloss": "dish, vegetable" },
+      { "char": "书", "pinyin": "shū", "gloss": "book" },
+      { "char": "车", "pinyin": "chē", "gloss": "vehicle" },
+      { "char": "大", "pinyin": "dà", "gloss": "big" },
+      { "char": "小", "pinyin": "xiǎo", "gloss": "small" },
+      { "char": "好", "pinyin": "hǎo", "gloss": "good" },
+      { "char": "名", "pinyin": "míng", "gloss": "name (名字)" },
+      { "char": "字", "pinyin": "zì", "gloss": "character (名字)" }
+    ]
+  },
+  {
+    "group": "Politeness",
+    "chars": [
+      { "char": "请", "pinyin": "qǐng", "gloss": "please" },
+      { "char": "谢", "pinyin": "xiè", "gloss": "thanks (谢谢)" },
+      { "char": "再", "pinyin": "zài", "gloss": "again (再见)" },
+      { "char": "见", "pinyin": "jiàn", "gloss": "to see (再见)" },
+      { "char": "问", "pinyin": "wèn", "gloss": "to ask (请问)" },
+      { "char": "起", "pinyin": "qǐ", "gloss": "rise (对不起)" },
+      { "char": "关", "pinyin": "guān", "gloss": "concern (没关系)" },
+      { "char": "系", "pinyin": "xì", "gloss": "relation (没关系)" }
+    ]
+  }
+]

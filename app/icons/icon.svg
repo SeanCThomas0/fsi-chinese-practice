@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="96" fill="#12141a"/>
+  <text x="256" y="330" font-size="280" text-anchor="middle" fill="#e05a4e"
+        font-family="PingFang SC, Hiragino Sans GB, sans-serif">中</text>
+  <text x="256" y="460" font-size="72" text-anchor="middle" fill="#d9a441"
+        font-family="-apple-system, sans-serif" font-weight="700">FSI</text>
+</svg>

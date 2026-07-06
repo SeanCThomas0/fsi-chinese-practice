@@ -1,0 +1,12 @@
+{
+  "name": "FSI Standard Chinese — Speaking Practice",
+  "short_name": "FSI 中文",
+  "description": "Practice spoken Mandarin with the public-domain FSI Standard Chinese course",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#12141a",
+  "theme_color": "#12141a",
+  "icons": [
+    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
