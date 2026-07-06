@@ -538,4 +538,7 @@ kbd {
   #content { padding: 18px 14px; }
   #shortcuts-hint { display: none; }
   #player { bottom: 0; }
+  .quiz-card { padding: 16px 10px; }
+  .tone-pick-label { width: 100%; text-align: center; }
+  .tone-btn { min-width: 46px; padding: 10px 8px; }
 }
