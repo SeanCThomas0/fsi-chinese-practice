@@ -101,6 +101,9 @@ function renderNav() {
 
 function show(viewId) {
   state.view = viewId;
+  if (location.hash.slice(1) !== viewId) {
+    history.replaceState(null, "", viewId === "home" ? "#" : "#" + viewId);
+  }
   renderNav();
   if (viewId === "home") renderHome();
   else if (viewId === "resource") renderResource();
@@ -109,6 +112,11 @@ function show(viewId) {
       state.catalog.core.find((m) => m.id === viewId) ||
       state.catalog.optional.find((m) => m.id === viewId);
     if (mod) renderModule(mod);
+    else {
+      state.view = "home";
+      renderNav();
+      renderHome();
+    }
   }
   $("#main").scrollTo?.(0, 0);
   window.scrollTo(0, 0);
@@ -552,8 +560,9 @@ document.addEventListener("keydown", (e) => {
 async function boot() {
   const res = await fetch("data/catalog.json");
   state.catalog = await res.json();
-  renderNav();
-  renderHome();
+  const hash = location.hash.slice(1);
+  show(hash || "home");
+  window.addEventListener("hashchange", () => show(location.hash.slice(1) || "home"));
 }
 
 boot().catch((e) => {
